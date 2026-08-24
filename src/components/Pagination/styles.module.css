@@ -1,0 +1,28 @@
+.pagination,
+.list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pagination {
+	gap: 12px;
+	width: 100%;
+}
+
+.pageNumber,
+.arrow {
+	padding: 8px;
+	border: none;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.pageNumber:disabled,
+.arrow:disabled {
+	cursor: default;
+}
+
+.pageNumber {
+	padding: 8px;
+}
