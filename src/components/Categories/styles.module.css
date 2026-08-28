@@ -1,0 +1,40 @@
+.categories {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	width: 100%;
+	min-width: 0;
+	max-width: 100%;
+	box-sizing: border-box;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	scrollbar-width: none;
+	padding: 4px 0;
+	scroll-behavior: smooth;
+	overscroll-behavior-x: contain;
+	overscroll-behavior-y: none;
+}
+
+.categories::-webkit-scrollbar {
+	display: none;
+}
+
+.item, .active {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 32px;
+	background-color: #f2f4f5;
+	cursor: pointer;
+	white-space: nowrap;
+	user-select: none;
+}
+
+.active {
+	color: #6b4eff;
+	background-color: #e7e7ff;
+}
+
