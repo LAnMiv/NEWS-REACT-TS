@@ -14,6 +14,12 @@ const Categories = ({ categories, selectedCategory, setSelectedCategory }) => {
 			className={styles.categories}
 			onWheel={handleWheel}
 		>
+			<button
+				onClick={() => setSelectedCategory(null)}
+				className={!selectedCategory ? styles.active : styles.item}
+			>
+				All
+			</button>
 			{categories?.map(category => {
 				return (
 					<button
