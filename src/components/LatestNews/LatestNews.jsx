@@ -8,10 +8,12 @@ const LatestNews = () => {
 
 	return (
 		<section className={styles.section}>
-			<BannersList
-				banners={data.news}
-				isLoading={isLoading}
-			/>
+			{data && (
+				<BannersList
+					banners={data.news}
+					isLoading={isLoading}
+				/>
+			)}
 		</section>
 	)
 };
