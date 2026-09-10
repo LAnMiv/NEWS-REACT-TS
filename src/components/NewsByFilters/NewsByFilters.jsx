@@ -52,7 +52,9 @@ const NewsByFilters = () => {
 				handlePreviousPage={handlePreviousPage}
 				handlePageClick={handlePageClick}
 			>
-				<NewsList isLoading={isLoading} news={data.news} />
+				{data && (
+					<NewsList isLoading={isLoading} news={data.news} />
+				)}
 			</PaginationWrapper>
 		</section>
 	)
