@@ -1,8 +1,13 @@
 import withSkeleton from "../../helpers/hocs/withSkeleton";
+import type { INews } from "../../interfaces";
 import NewsBanner from "../NewsBanner/NewsBanner";
 import styles from "./styles.module.css";
 
-const BannersList = ({ banners }) => {
+interface Props {
+	banners?: INews[];
+}
+
+const BannersList = ({ banners }: Props) => {
 	return (
 		<ul className={styles.banners}>
 			{banners?.map((banner) => {
@@ -14,6 +19,6 @@ const BannersList = ({ banners }) => {
 	)
 };
 
-const BannersListWithSkeleton = withSkeleton(BannersList, "banner", 5, "row")
+const BannersListWithSkeleton = withSkeleton<Props>(BannersList, "banner", 5, "row")
 
 export default BannersListWithSkeleton;
