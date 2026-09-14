@@ -1,4 +1,5 @@
 import { getCategories } from "../../api/apiNews";
+import { useTheme } from "../../context/ThemeContext";
 import { useFetch } from "../../helpers/hooks/useFetch";
 import type { CategoriesApiResponse, IFilters } from "../../interfaces";
 import Categories from "../Categories/Categories";
@@ -12,11 +13,12 @@ interface Props {
 }
 
 const NewsFilters = ({ filters, changeFilter }: Props) => {
+	const { isDark } = useTheme();
 	const { data: dataCategories } = useFetch<CategoriesApiResponse, null>(getCategories);
 
 	return (
 		<div className={styles.filters}>
-			<Slider>
+			<Slider isDark={isDark}>
 				{dataCategories ? (
 					<Categories
 						categories={dataCategories?.categories}
