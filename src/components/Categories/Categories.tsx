@@ -4,7 +4,7 @@ import type { CategoriesType } from "../../interfaces";
 
 interface Props {
 	categories: CategoriesType[];
-	selectedCategory: CategoriesType | null;
+	selectedCategory: CategoriesType | null | undefined;
 	setSelectedCategory: (category: CategoriesType | null) => void;
 }
 
