@@ -3,6 +3,7 @@ import type { CategoriesType } from "@/entities/category";
 export interface INews {
 	author: string;
 	category: CategoriesType[];
+	description: string;
 	id: string;
 	image: string;
 	language: string;
